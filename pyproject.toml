@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wunder_plus"
+version = "0.1.0"
+description = "Automation and enhancements for Wunder"
+authors = [
+  { name = "Matthias Kristensen" }
+]
+dependencies = [
+  "playwright>=1.40",
+  "requests>=2.31"
+]
+requires-python = ">=3.10"
+
+[tool.black]
+line-length = 88
+target-version = ["py310"]
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+addopts = "-ra -q"
+testpaths = ["tests"]

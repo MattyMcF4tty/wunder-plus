@@ -1,0 +1,53 @@
+{
+  "cookies": [
+    {
+      "name": "_ga",
+      "value": "GA1.1.2119239509.1755628995",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1790197546.977411
+    },
+    {
+      "name": "_hjSessionUser_1795401",
+      "value": "eyJpZCI6ImM5MjRhNjIyLTYzZDQtNTI5ZC05YmI5LWVhNmYyM2EyMDhkNiIsImNyZWF0ZWQiOjE3NTU2Mjg5OTQ4NTEsImV4aXN0aW5nIjp0cnVlfQ==",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1787171466
+    },
+    {
+      "name": "PHPSESSID",
+      "value": "eup7vhmcguku9om59r2c223t07",
+      "domain": "greenmobility.backend.fleetbird.eu",
+      "path": "/",
+      "expires": -1
+    },
+    {
+      "name": "_csrf-backend",
+      "value": "19e61b1ef64932199c0b69bffc08148c124910578d3a75d3cbd806295dd7a5fba%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22LqeYa2SUQwPDL4LR1yqWnlB3aFZ1sBKU%22%3B%7D",
+      "domain": "greenmobility.backend.fleetbird.eu",
+      "path": "/",
+      "expires": -1
+    },
+    {
+      "name": "_ga_MGNY1PKLS9",
+      "value": "GS2.1.s1755634729$o2$g1$t1755637546$j39$l0$h0",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1756242346.981814
+    }
+  ],
+  "map_settings": {
+    "style": "mapbox://styles/mapbox/light-v10",
+    "layers": {
+      "showBusinessTerritories": true,
+      "showNoParkingAreas": true,
+      "showLowSpeedAreas": true,
+      "showIncentiveAreas": true,
+      "showVehiclesPins": true,
+      "showOperatorsPins": false,
+      "showPointsOfInterestsPins": false
+    },
+    "showTraffic": true,
+    "vehiclesClusterMaxZoom": 0
+  }
+}

@@ -12,24 +12,23 @@ def start():
     browser = pw.chromium.launch(headless=False)
     context = browser.new_context(viewport=None, permissions=['geolocation'])
 
-    # All context mutations must happen while Playwright is alive
     setup_context(context)
+
+    # Attach mods initializer
+    context.on('page', initialize)
 
     # Open first page
     page = context.new_page()
     page.goto(DEFAULT_PAGE)
 
-    # Attach mods initializer for any subsequently opened pages.
-    # IMPORTANT: pass the callable, don't call it immediately.
-    context.on('page', initialize)
 
-    # Keep the process alive until all pages are closed
+
+    # Keep the alive
     while True:
       pages = context.pages
       if not pages:
         break
 
-      # Wait for the first page to close before checking again
       pages[0].wait_for_event("close", timeout=0)
 
   print('Exiting Wunder+')

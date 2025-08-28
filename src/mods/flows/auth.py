@@ -1,27 +1,24 @@
 from playwright.sync_api import Page, BrowserContext
-from ...cache import cookies
+from ...cache import cookie_store
 
 _AUTH_FLOW_FLAG = '_wunder_auth_flow'
 
 
 def flow_handler (page: Page):
     # Handle the wunder auth flow and save auth cookies
-  if 'Enter your Verification Code' in page.title():
+  if 'login' in page.url and not hasattr(page, _AUTH_FLOW_FLAG):
     print("Detected auth flow, waiting for user to complete...")
+    cookie_store.clear()
     setattr(page, _AUTH_FLOW_FLAG, True)
   elif hasattr(page, _AUTH_FLOW_FLAG):
     print("Auth flow completed, saving cookies...")
     context = page.context
-    cookies = get_auth_cookies(context)
-    cookies.write(cookies)
+    auth_cookies = get_auth_cookies(context)
+    cookie_store.write(auth_cookies)
     delattr(page, _AUTH_FLOW_FLAG)
-  else: 
-    context = page.context
-    cookies = get_auth_cookies(context)
-    cookies.write(cookies)
 
 
-def get_auth_cookies(context: BrowserContext) -> list[cookies.Cookie]:
+def get_auth_cookies(context: BrowserContext) -> list[cookie_store.Cookie]:
     print("Obtaining cookies...")
     cookies = context.cookies()
 
@@ -31,24 +28,17 @@ def get_auth_cookies(context: BrowserContext) -> list[cookies.Cookie]:
 
     # Select only the cookies we care about
     selected = [
-        c for c in cookies
-        if c["name"] in static_wanted or any(c["name"].startswith(prefix) for prefix in dynamic_prefixes)
+        cookie_store.filter_cookie(c)
+        for c in cookies
+        if (name := c.get("name"))
+        and (name in static_wanted or any(name.startswith(prefix) for prefix in dynamic_prefixes))
     ]
 
-    filtered = [
-        {
-            "name": c["name"],
-            "value": c["value"],
-            "domain": c.get("domain", ""),
-            "path": c.get("path", "/"),
-            "expires": c.get("expires")
-        }
-        for c in selected
-    ]
 
-    if len(filtered) == 0:
+
+    if len(selected) == 0:
         print("Found no matching cookies in browser")
     else:
-        print("Found", len(filtered), "matching cookies")
+        print("Found", len(selected), "matching cookies")
 
-    return filtered
+    return selected

@@ -4,21 +4,22 @@ from .pages import router
 from .flows import auth
 
 def initialize(page: Page) -> None:
+  print(f"[Mod] Initializing mod for {page.url}")
 
   # If we're not on the correct domain, clear listener tag
-  if DOMAIN_NAME not in page.url:
-    if hasattr(page, LISTENER_TAG):
-      delattr(page, LISTENER_TAG)
+  if DOMAIN_NAME not in page.url and hasattr(page, LISTENER_TAG):
+    delattr(page, LISTENER_TAG)
     return
 
-  # Guard: only attach the listener once per page
-  if getattr(page, LISTENER_TAG, False):
+  # Only initialize once per page
+  if not hasattr(page, LISTENER_TAG):
+    setattr(page, LISTENER_TAG, True)
+  else:
     return
 
-  setattr(page, LISTENER_TAG, True)
 
   def on_frame_navigated(frame: Frame) -> None:
-    # We avoid ads and videos by only detecting the main frame
+    # We avoid frame navigation events from ads and videos by only detecting the main frame
     if frame != page.main_frame:
       return
     if DOMAIN_NAME in page.url:
@@ -34,6 +35,7 @@ def initialize(page: Page) -> None:
 
 def on_navigation(page: Page):
   print(f"[Mod] Navigated to {page.url}")
+  
   # Flows
   auth.flow_handler(page)
 

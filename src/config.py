@@ -5,7 +5,7 @@ from pathlib import Path
 # Load .env file
 load_dotenv()
 
-DOMAIN_NAME = os.getenv("DOMAIN")
+DOMAIN_NAME = os.getenv("DOMAIN") or ""
 DEFAULT_PAGE = f"https://{DOMAIN_NAME}/site/login#/dashboard"
 CACHE_FILE = Path(__file__).parent / 'cache' / 'cache.json'
 

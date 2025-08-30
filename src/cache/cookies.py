@@ -18,8 +18,8 @@ class Cookie(TypedDict):
 ALLOWED_KEYS = set(Cookie.__annotations__.keys())
 
 def filter_cookie(cookie: Mapping[str, Any]) -> Cookie:
-    filtered: dict[str, Any] = {key: value for key, value in cookie.items() if key in ALLOWED_KEYS}
-    return cast(Cookie, filtered)
+  filtered: dict[str, Any] = {key: value for key, value in cookie.items() if key in ALLOWED_KEYS}
+  return cast(Cookie, filtered)
 
 def write(updatedCookies: list[Cookie]):
   print('Updating cookies in cache...')

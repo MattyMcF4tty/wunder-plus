@@ -5,8 +5,8 @@ _AUTH_FLOW_FLAG = '_wunder_auth_flow'
 
 
 def flow_handler (page: Page):
-    # Handle the wunder auth flow and save auth cookies
-  if 'login' in page.url and not hasattr(page, _AUTH_FLOW_FLAG):
+# Handle the wunder auth flow and save auth cookies
+  if 'login' in page.url or 'auth' in page.url and not hasattr(page, _AUTH_FLOW_FLAG):
     print("Detected auth flow, waiting for user to complete...")
     cookie_store.clear()
     setattr(page, _AUTH_FLOW_FLAG, True)

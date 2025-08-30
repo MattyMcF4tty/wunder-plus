@@ -9,5 +9,4 @@ def setup_context(context: BrowserContext) -> None:
     print(f'Injecting {len(cached_cookies)} cached cookies into browser context')
     context.add_cookies(cached_cookies)
 
-
   inject_map_settings_init(context)

@@ -1,88 +1,98 @@
 {
-	"cookies": [
-		{
-			"name": "_hjSessionUser_1795401",
-			"value": "eyJpZCI6Ijk5MWYyM2Y5LTM3YWUtNTQ1MS05MTVmLTAzNDlmMjU1MTYwMSIsImNyZWF0ZWQiOjE3NTY0MDk0ODE4NDgsImV4aXN0aW5nIjpmYWxzZX0=",
-			"domain": ".fleetbird.eu",
-			"path": "/",
-			"expires": 1787945481,
-			"httpOnly": false,
-			"secure": true,
-			"sameSite": "None"
-		},
-		{
-			"name": "_hjSession_1795401",
-			"value": "eyJpZCI6IjM1MGQwMTlhLTM5NGItNDNjNi04MjQ5LWQ5MjY5MmIzNzk2ZiIsImMiOjE3NTY0MDk0ODE4NDksInMiOjAsInIiOjAsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
-			"domain": ".fleetbird.eu",
-			"path": "/",
-			"expires": 1756411281,
-			"httpOnly": false,
-			"secure": true,
-			"sameSite": "None"
-		},
-		{
-			"name": "_ga",
-			"value": "GA1.1.698553033.1756409482",
-			"domain": ".fleetbird.eu",
-			"path": "/",
-			"expires": 1790969481.958078,
-			"httpOnly": false,
-			"secure": false,
-			"sameSite": "Lax"
-		},
-		{
-			"name": "PHPSESSID",
-			"value": "np1382kaqarp96n5337ha6flnn",
-			"domain": "greenmobility.backend.fleetbird.eu",
-			"path": "/",
-			"expires": -1,
-			"httpOnly": true,
-			"secure": true,
-			"sameSite": "Lax"
-		},
-		{
-			"name": "_identity",
-			"value": "2c27d28f12b2bde127389108057ba18a203b8e67b7c3ad7765afe4e3249e458da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B466%2C%22J9KEwxVxNooIyEoXphdHg1TgajZJM24B%22%2C1209600%5D%22%3B%7D",
-			"domain": "greenmobility.backend.fleetbird.eu",
-			"path": "/",
-			"expires": 1757619126.394569,
-			"httpOnly": true,
-			"secure": true,
-			"sameSite": "Lax"
-		},
-		{
-			"name": "_csrf-backend",
-			"value": "b4f22d086fd4689d014a2b6fd2525d642e8a4fd859ac2beb33dd2ceafd992374a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22xNZT-A5WkkuAMX-S7FGVwEKqdQIT7342%22%3B%7D",
-			"domain": "greenmobility.backend.fleetbird.eu",
-			"path": "/",
-			"expires": -1,
-			"httpOnly": true,
-			"secure": true,
-			"sameSite": "Lax"
-		},
-		{
-			"name": "_ga_MGNY1PKLS9",
-			"value": "GS2.1.s1756409481$o1$g1$t1756409526$j15$l0$h0",
-			"domain": ".fleetbird.eu",
-			"path": "/",
-			"expires": 1757014326.402708,
-			"httpOnly": false,
-			"secure": true,
-			"sameSite": "None"
-		}
-	],
-	"map_settings": {
-		"style": "mapbox://styles/mapbox/light-v10",
-		"layers": {
-			"showBusinessTerritories": true,
-			"showNoParkingAreas": true,
-			"showLowSpeedAreas": true,
-			"showIncentiveAreas": true,
-			"showVehiclesPins": true,
-			"showOperatorsPins": false,
-			"showPointsOfInterestsPins": false
-		},
-		"showTraffic": false,
-		"vehiclesClusterMaxZoom": 0
-	}
+  "cookies": [
+    {
+      "name": "_hjSessionUser_1795401",
+      "value": "eyJpZCI6IjlkNzViZjlmLTNiYmEtNTQwNy05MmIyLWMzMmM5NTk2ZTIxNyIsImNyZWF0ZWQiOjE3NTY0MTUxODk3NTIsImV4aXN0aW5nIjp0cnVlfQ==",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1787951207,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_hjSession_1795401",
+      "value": "eyJpZCI6IjU3Nzc5Yzk1LWE0Y2QtNDJlOC04YzQxLWI1NzYwOTdjY2E5NCIsImMiOjE3NTY0MTUxODk3NTMsInMiOjEsInIiOjEsInNiIjowLCJzciI6MCwic2UiOjAsImZzIjoxLCJzcCI6MH0=",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1756416989,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "_ga",
+      "value": "GA1.1.752452327.1756415190",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1790975207.706621,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "PHPSESSID",
+      "value": "dtdvrutakaafdgvcoroo32nsi4",
+      "domain": "greenmobility.backend.fleetbird.eu",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_identity",
+      "value": "2c27d28f12b2bde127389108057ba18a203b8e67b7c3ad7765afe4e3249e458da%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A48%3A%22%5B466%2C%22J9KEwxVxNooIyEoXphdHg1TgajZJM24B%22%2C1209600%5D%22%3B%7D",
+      "domain": "greenmobility.backend.fleetbird.eu",
+      "path": "/",
+      "expires": 1757624832.845704,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_csrf-backend",
+      "value": "16caf761eb5ededf9f95a76081c2066578f9629f683713cb37080695cf335865a%3A2%3A%7Bi%3A0%3Bs%3A13%3A%22_csrf-backend%22%3Bi%3A1%3Bs%3A32%3A%22miJjLCq-Tt3OGH87ACIjPu_8ZXbKnvOW%22%3B%7D",
+      "domain": "greenmobility.backend.fleetbird.eu",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_mfa-device-token",
+      "value": "8a7c6578e77e81cbb037b1dd836eb5acaae4b6434b2858d9106aa594afe943ffa%3A2%3A%7Bi%3A0%3Bs%3A17%3A%22_mfa-device-token%22%3Bi%3A1%3Bs%3A32%3A%22dhXwBIz2ys9yGnxbmuNHzkuRreRvt1i7%22%3B%7D",
+      "domain": "greenmobility.backend.fleetbird.eu",
+      "path": "/",
+      "expires": 1761599232.271952,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "_ga_MGNY1PKLS9",
+      "value": "GS2.1.s1756415189$o1$g1$t1756415232$j17$l0$h0",
+      "domain": ".fleetbird.eu",
+      "path": "/",
+      "expires": 1757020032.853795,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "map_settings": {
+    "style": "mapbox://styles/mapbox/light-v10",
+    "layers": {
+      "showBusinessTerritories": true,
+      "showNoParkingAreas": true,
+      "showLowSpeedAreas": true,
+      "showIncentiveAreas": true,
+      "showVehiclesPins": true,
+      "showOperatorsPins": false,
+      "showPointsOfInterestsPins": false
+    },
+    "showTraffic": false,
+    "vehiclesClusterMaxZoom": 0
+  }
 }

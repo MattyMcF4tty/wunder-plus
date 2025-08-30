@@ -1,6 +1,7 @@
 import json
 from playwright.sync_api import BrowserContext
 from ..cache import map_settings
+from typing import Any
 
 def inject_map_settings_init(context: BrowserContext) -> None:
   cached_settings = map_settings.read()

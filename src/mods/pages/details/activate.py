@@ -3,4 +3,6 @@ from . import sort_tasks
 
 
 def activate (page: Page):
-  sort_tasks.newest_task_first(page)
+  print("[Details] Activating details page modifications...")
+
+  sort_tasks.newest_first(page)

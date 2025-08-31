@@ -3,8 +3,8 @@ from .store import read_cache_file, save_cache_file
 
 
 class Cookie(TypedDict):
-  name: NotRequired[str]
-  value: NotRequired[str]
+  name: str
+  value: str
   url: NotRequired[str | None]
   domain: NotRequired[str | None]
   path: NotRequired[str | None]

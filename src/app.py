@@ -10,7 +10,7 @@ def start():
   # Own the Playwright lifecycle here
   with sync_playwright() as pw:
     browser = pw.chromium.launch(headless=False)
-    context = browser.new_context(viewport=None, permissions=['geolocation'])
+    context = browser.new_context(no_viewport=True, viewport=None, permissions=['geolocation'])
 
     setup_context(context)
 
@@ -20,7 +20,6 @@ def start():
     # Open first page
     page = context.new_page()
     page.goto(DEFAULT_PAGE)
-
 
 
     # Keep the alive

@@ -39,6 +39,7 @@ def on_navigation(page: Page):
   # Flows
   auth.flow_handler(page)
 
+
   # Pages
   router(page)
   
